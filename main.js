@@ -34,3 +34,10 @@ const changeSlide = () => {
    h1.textContent = articles[active].title;
    changeDot()
 }
+const changeDot = () => {
+   const index = dots.findIndex(dot => dot.classList.contains('active'));
+   dots[index].classList.remove('active');
+   dots[active].classList.add('active')
+}
+
+let intervalIndex = setInterval(changeSlide, 2000);
